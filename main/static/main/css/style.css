@@ -71,13 +71,13 @@ h2 {
 .ui-input input + label::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.ui-input input + label::after {
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  background-color: #6EB1FF;
-  height: 2px;
-}
+/*.ui-input input + label::after {*/
+  /*transform: scaleX(0);*/
+  /*transform-origin: left;*/
+  /*transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1);*/
+  /*background-color: #6EB1FF;*/
+  /*height: 2px;*/
+/*}*/
 .ui-input input + label span {
   position: relative;
   color: rgba(255, 255, 255, 0.2);
@@ -128,16 +128,20 @@ h2 {
   background-position: 0% 50%;
 }
 
-.ui-input input:focus {
-  color: #6EB1FF;
+#contact-us label{
+  color: white;
 }
-.ui-input input:focus + label::after {
-  background-color: #6EB1FF;
-}
-.ui-input input:focus + label span::after {
-  background-image: linear-gradient(to right, #6EB1FF 50%, rgba(255, 255, 255, 0) 0%);
-  background-position: 0% 50%;
-}
+
+/*.ui-input input:focus {*/
+  /*color: #6EB1FF;*/
+/*}*/
+/*.ui-input input:focus + label::after {*/
+  /*background-color: #6EB1FF;*/
+/*}*/
+/*.ui-input input:focus + label span::after {*/
+  /*background-image: linear-gradient(to right, #6EB1FF 50%, rgba(255, 255, 255, 0) 0%);*/
+  /*background-position: 0% 50%;*/
+/*}*/
 
 /*.ui-input input.error,*/
 /*.ui-input input:invalid {*/
