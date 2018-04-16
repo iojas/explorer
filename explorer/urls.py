@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from main import views as mainViews
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^contact/', mainViews.ContactView.as_view(), name='contact'),
 ]

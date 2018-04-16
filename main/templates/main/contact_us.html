@@ -1,0 +1,59 @@
+{% load static %}
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <br>
+            <h3>Contact Us</h3>
+            <hr>
+            <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+                    <fieldset class="form-fieldset ui-input __first">
+{#                      <input type="text" id="name" tabindex="0">#}
+                        {{ form.name }}
+                      <label for="name">
+                        <span>{{ form.name.label_tag }}</span>
+                      </label>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset ui-input __second">
+{#                      <input type="text" id="email" tabindex="0">#}
+                        {{ form.email }}
+                      <label for="email">
+                        <span>{{ form.email.label_tag }}</span>
+                      </label>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset ui-input __third">
+{#                      <input type="textarea" id="message" tabindex="0">#}
+                        {{ form.message }}
+                      <label for="message">
+                        <span>{{ form.message.label_tag}}</span>
+                      </label>
+                    </fieldset>
+
+                <br>
+            <button type="submit" class="btn btn-success">Send</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+<br>
+
+
